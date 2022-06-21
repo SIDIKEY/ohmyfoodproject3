@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet Openclassroom 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.cs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SIDIKEY/ohmyfood.git"
+  },
+  "author": "Aboubacar Sidiki Keita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SIDIKEY/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/SIDIKEY/ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.52.3"
+  }
+}

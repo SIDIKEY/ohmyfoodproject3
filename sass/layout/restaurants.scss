@@ -1,0 +1,179 @@
+@use "../utils/colors.scss";
+@use "../utils/gradient.scss";
+
+@media screen and (min-width:801px){
+    .restaurants{
+        background-color: colors.$lightgrey;
+    padding: 32px 16px;
+    .restaurants_size{
+        max-width: 1280px;
+        margin: auto;
+        position: relative;
+    }
+    & h2{
+        font-size: 24px;
+        font-weight: bold;
+    }
+   
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 45px;
+            column-gap: 35px;
+            padding-top: 10px;
+            height: fit-content;
+            width: 100%;
+            margin: auto;
+            .card {
+                background-color: #fff;
+                border-radius: 16px;
+                position: relative;
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                width: 47%;
+                .card_img {
+                    height: 190px;
+                    width: 100%;
+                    border: 0 solid transparent;
+                    border-radius: 16px 16px 0 0;
+                    box-shadow: none;
+                    object-fit: cover;
+                }
+                .card_caption {
+                    background-color: colors.$tertiary;
+                    color: #1b6150;
+                    padding: 8px;
+                    border-radius: 2px;
+                    position: absolute;
+                    top: 16px;
+                    right: 12px;
+                }
+                .card_contents {
+                    padding: 6px 12px 12px 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .card_contents_text {
+                        line-height: 27px;
+                    }
+                    .card_like_btn{
+                        width: 32px;
+                        height: 32px;
+                        position: relative;
+                        :hover>.fa-solid{
+                            opacity: 1;                    
+                        }
+                        & i{
+                            font-size: 32px;
+                            bottom:0;
+                            position: absolute;                      
+                        }
+                        .fa-solid{
+                            color: transparent;
+                            @include gradient.gradient;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            opacity: 0;
+                            transition: ease-in-out;
+                            transition-duration: .5s;
+                            cursor: pointer;
+                        }
+                        .fa-solid:hover {
+                            opacity: 1;
+                            
+                            
+                        }
+                    }      
+                }  
+            }
+       }
+    }
+    
+}
+
+@media screen and (max-width:800px){
+    .restaurants{
+        background-color: colors.$lightgrey;
+        padding: 32px 16px;
+        .restaurants_size{
+            max-width: 1280px;
+            position: relative;
+            & h2{
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .cards{ 
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+                justify-content: center;
+                row-gap: 20px;
+                padding-top: 20px;
+                width:96%;
+                .card {
+                    background-color: #fff;
+                    border-radius: 16px;
+                    position: relative;
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    width: 99%;
+                    .card_img {
+                        height: 190px;
+                        width: 100%;
+                        border: 0 solid transparent;
+                        border-radius: 16px 16px 0 0;
+                        box-shadow: none;
+                        object-fit: cover;
+                    }
+                    .card_caption {
+                        background-color: colors.$tertiary;
+                        color: #1b6150;
+                        padding: 8px;
+                        border-radius: 2px;
+                        position: absolute;
+                        top: 16px;
+                        right: 12px;
+                    }
+                    .card_contents {
+                        padding: 6px 12px 12px 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .card_contents_text {
+                            line-height: 27px;
+                        }
+                        .card_like_btn{
+                            width: 32px;
+                            height: 32px;
+                            position: relative;
+                            & i{
+                                font-size: 32px;
+                                position: absolute;
+                            } 
+                            .fa-solid{                               
+                                color: transparent;
+                                @include gradient.gradient;
+                                background-image: linear-gradient(colors.$primal, colors.$secondary);
+                                background-clip: text;
+                                -webkit-background-clip: text;  
+                                opacity: 0;
+                                transition: ease-in-out;
+                                transition-duration: .5s;
+                            }
+                            .fa-solid:hover{
+                                opacity: 1;
+                            }                
+                        }      
+                    }  
+                }
+           }
+        }
+    }        
+}  
+
+
+
+

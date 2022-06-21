@@ -1,0 +1,724 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.txt_align {
+  text-align: center;
+}
+
+header {
+  font-family: "shrikhand", cursive;
+  box-shadow: 0 6px 6px rgb(202, 198, 198);
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+
+.location {
+  height: 45px;
+  background-color: rgb(233, 232, 232);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  font-family: "Roboto";
+}
+.location h2 {
+  font-size: medium;
+  font-weight: 600;
+}
+.location i {
+  font-size: 15px;
+}
+
+.explore {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  background-color: #F6F6F6;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+}
+.explore .explore_size {
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Roboto";
+}
+.explore .explore_size h2 {
+  font-size: 21px;
+}
+.explore .explore_size p {
+  font-size: 16px;
+}
+.explore .explore_size button {
+  box-shadow: 0px 4px 4px 0.5px #c8c7c7;
+  background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+  border-radius: 28px;
+  border: none;
+  display: inline-block;
+  color: white;
+  padding: 15px 30px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.explore .explore_size button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.function {
+  padding-top: 30px;
+  font-family: "Roboto";
+}
+.function h2 {
+  margin-left: 15px;
+}
+@media screen and (max-width: 800px) {
+  .function .function_widgets {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 70px;
+  }
+  .function .function_widgets .f_widget {
+    width: 85%;
+    height: 65px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0px 4px 4px 0.5px rgba(209, 207, 207, 0.5490196078);
+    position: relative;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .function .function_widgets .f_widget:hover {
+    background-color: rgba(217, 189, 235, 0.281);
+  }
+  .function .function_widgets .f_widget:hover > i {
+    color: #9356DC;
+  }
+  .function .function_widgets .f_widget .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    background-color: #9356DC;
+    position: relative;
+    right: 11px;
+  }
+  .function .function_widgets .f_widget i {
+    padding-right: 1%;
+    color: gray;
+  }
+  .function .function_widgets .f_widget .f_widget_text p {
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .function {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-family: "Roboto";
+  }
+  .function h2 {
+    font-size: 24px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+  }
+  .function .function_widgets {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .function .function_widgets .f_widget {
+    width: 31%;
+    max-width: 350px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 4px 0.5px rgba(209, 207, 207, 0.5490196078);
+    position: relative;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .function .function_widgets :hover {
+    background-color: rgba(217, 189, 235, 0.281);
+  }
+  .function .function_widgets :hover > i {
+    color: rgb(114, 83, 191);
+  }
+  .function .function_widgets .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    background-color: #9356DC;
+    position: relative;
+    right: 11px;
+  }
+  .function .function_widgets i {
+    margin-left: -10px;
+    margin-right: 1%;
+    color: grey;
+  }
+  .function .function_widgets p {
+    background-color: none;
+  }
+  .function .function_widgets .f_widget_text {
+    width: fit-content;
+  }
+  .function .function_widgets .f_widget_text p {
+    -webkit-user-select: none;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+footer {
+  background-color: #353535;
+  margin: 0;
+  width: 100%;
+  height: 150px;
+}
+footer .footer_size {
+  padding-left: 25px;
+  padding-top: 15px;
+  color: white;
+}
+footer .footer_size h3 {
+  font-family: "Shrikhand";
+  padding-bottom: 10px;
+}
+footer .footer_size ul {
+  list-style-type: none;
+}
+footer .footer_size ul li .footer_link {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+@media screen and (min-width: 801px) {
+  .restaurants {
+    background-color: #F6F6F6;
+    padding: 32px 16px;
+  }
+  .restaurants .restaurants_size {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+  }
+  .restaurants h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .restaurants .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 45px;
+    column-gap: 35px;
+    padding-top: 10px;
+    height: fit-content;
+    width: 100%;
+    margin: auto;
+  }
+  .restaurants .cards .card {
+    background-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 47%;
+  }
+  .restaurants .cards .card .card_img {
+    height: 190px;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 16px 16px 0 0;
+    box-shadow: none;
+    object-fit: cover;
+  }
+  .restaurants .cards .card .card_caption {
+    background-color: #99E2D0;
+    color: #1b6150;
+    padding: 8px;
+    border-radius: 2px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+  }
+  .restaurants .cards .card .card_contents {
+    padding: 6px 12px 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .restaurants .cards .card .card_contents .card_contents_text {
+    line-height: 27px;
+  }
+  .restaurants .cards .card .card_contents .card_like_btn {
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+  .restaurants .cards .card .card_contents .card_like_btn :hover > .fa-solid {
+    opacity: 1;
+  }
+  .restaurants .cards .card .card_contents .card_like_btn i {
+    font-size: 32px;
+    bottom: 0;
+    position: absolute;
+  }
+  .restaurants .cards .card .card_contents .card_like_btn .fa-solid {
+    color: transparent;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  .restaurants .cards .card .card_contents .card_like_btn .fa-solid:hover {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 800px) {
+  .restaurants {
+    background-color: #F6F6F6;
+    padding: 32px 16px;
+  }
+  .restaurants .restaurants_size {
+    max-width: 1280px;
+    position: relative;
+  }
+  .restaurants .restaurants_size h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .restaurants .restaurants_size .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    row-gap: 20px;
+    padding-top: 20px;
+    width: 96%;
+  }
+  .restaurants .restaurants_size .cards .card {
+    background-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 99%;
+  }
+  .restaurants .restaurants_size .cards .card .card_img {
+    height: 190px;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 16px 16px 0 0;
+    box-shadow: none;
+    object-fit: cover;
+  }
+  .restaurants .restaurants_size .cards .card .card_caption {
+    background-color: #99E2D0;
+    color: #1b6150;
+    padding: 8px;
+    border-radius: 2px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+  }
+  .restaurants .restaurants_size .cards .card .card_contents {
+    padding: 6px 12px 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .restaurants .restaurants_size .cards .card .card_contents .card_contents_text {
+    line-height: 27px;
+  }
+  .restaurants .restaurants_size .cards .card .card_contents .card_like_btn {
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+  .restaurants .restaurants_size .cards .card .card_contents .card_like_btn i {
+    font-size: 32px;
+    position: absolute;
+  }
+  .restaurants .restaurants_size .cards .card .card_contents .card_like_btn .fa-solid {
+    color: transparent;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+  }
+  .restaurants .restaurants_size .cards .card .card_contents .card_like_btn .fa-solid:hover {
+    opacity: 1;
+  }
+}
+img {
+  max-width: 100%;
+  position: relative;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+@media screen and (min-width: 801px) {
+  .menus {
+    height: 600px;
+    border-radius: 50px 50px 0 0;
+    background-color: #f6f6f6;
+    position: relative;
+    bottom: 100px;
+  }
+  .menus .menu_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 80px;
+    margin: auto;
+    border: 0px solid red;
+    padding: 1rem;
+  }
+  .menus .menu_header h2 {
+    font-family: "Shrikhand";
+    font-size: 28px;
+  }
+  .menus .menu_header .card_like_btn {
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+  .menus .menu_header .card_like_btn :hover > .fa-solid {
+    opacity: 1;
+  }
+  .menus .menu_header .card_like_btn i {
+    font-size: 32px;
+    right: 0;
+    position: absolute;
+  }
+  .menus .menu_header .card_like_btn .fa-solid {
+    color: transparent;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  .menus .menu_header .card_like_btn .fa-solid:hover {
+    opacity: 1;
+  }
+  .menus h3 {
+    margin-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .menus .starters {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  .menus .starters .f_widget:hover .m_price {
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .menus .starters .f_widget:hover .m_price_rotate {
+    -webkit-animation: rotate-center 1s ease-in-out reverse both;
+    animation: rotate-center 1s ease-in-out reverse both;
+  }
+  @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(140deg);
+    }
+  }
+  .menus .starters .f_widget:hover > .m_price_slide {
+    -webkit-animation: slide-left 0.5s ease-in-out both;
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-80px);
+      transform: translateX(-80px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-80px);
+      transform: translateX(-80px);
+    }
+  }
+  .menus .starters .f_widget {
+    width: 30%;
+    height: 65px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    gap: 12px;
+    padding: 1rem 0 1rem 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+  .menus .starters .f_widget .menu_contents_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid green;
+    display: block;
+    text-align: start;
+    max-width: 65%;
+    line-height: 2rem;
+  }
+  .menus .starters .f_widget .menu_contents_description h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    border: 0px solid red;
+  }
+  .menus .starters .f_widget .menu_contents_description p {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid blue;
+  }
+  .menus .starters .f_widget .m_price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+  }
+  .menus .starters .f_widget .m_price_slide {
+    background-color: #99e2d0;
+    margin: -1rem -5.2rem -1rem 0;
+    width: 17%;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+  }
+  .menus .starters .f_widget .m_price_slide .m_price_rotate {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition: 1s;
+    color: #99e2d0;
+  }
+  .menus .main_course {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  .menus .main_course .f_widget:hover .m_price {
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .menus .main_course .f_widget:hover .m_price_rotate {
+    -webkit-animation: rotate-center 1s ease-in-out reverse both;
+    animation: rotate-center 1s ease-in-out reverse both;
+  }
+  @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(140deg);
+    }
+  }
+  .menus .main_course .f_widget:hover > .m_price_slide {
+    -webkit-animation: slide-left 0.5s ease-in-out both;
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-80px);
+      transform: translateX(-80px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-80px);
+      transform: translateX(-80px);
+    }
+  }
+  .menus .main_course .f_widget {
+    width: 30%;
+    height: 65px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    gap: 12px;
+    padding: 1rem 0 1rem 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+  .menus .main_course .f_widget .menu_contents_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid green;
+    display: block;
+    text-align: start;
+    max-width: 65%;
+    line-height: 2rem;
+  }
+  .menus .main_course .f_widget .menu_contents_description h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    border: 0px solid red;
+  }
+  .menus .main_course .f_widget .menu_contents_description p {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid blue;
+  }
+  .menus .main_course .f_widget .m_price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+  }
+  .menus .main_course .f_widget .m_price_slide {
+    background-color: #99e2d0;
+    margin: -1rem -5.2rem -1rem 0;
+    width: 17%;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+  }
+  .menus .main_course .f_widget .m_price_slide .m_price_rotate {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition: 1s;
+    color: #99e2d0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

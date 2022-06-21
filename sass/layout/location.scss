@@ -1,0 +1,18 @@
+.location {
+    
+    height: 45px;
+    background-color: rgb(233, 232, 232);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    font-family: 'Roboto';
+    & h2 {
+        font-size: medium;
+        font-weight: 600;  
+    }
+    & i {
+        font-size: 15px;  
+    }
+}
