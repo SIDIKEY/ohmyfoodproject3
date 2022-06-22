@@ -410,7 +410,7 @@ body {
 
 @media screen and (min-width: 801px) {
   .menus {
-    height: 600px;
+    height: 700px;
     border-radius: 50px 50px 0 0;
     background-color: #f6f6f6;
     position: relative;
@@ -460,6 +460,12 @@ body {
     margin-left: 5%;
     padding-top: 10px;
     padding-bottom: 5px;
+  }
+  .menus .span {
+    width: 45px;
+    height: 5px;
+    background-color: #99e2d0;
+    margin-left: 5%;
   }
   .menus .starters {
     display: flex;
@@ -718,6 +724,27 @@ body {
     border-radius: 100px;
     transition: 1s;
     color: #99e2d0;
+  }
+  .menus .order_menu {
+    width: 100%;
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+  }
+  .menus .order_menu button {
+    box-shadow: 0px 4px 4px 0.5px #c8c7c7;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    border-radius: 28px;
+    border: none;
+    display: inline-block;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .menus .order_menu button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
   }
 }
 
