@@ -399,6 +399,66 @@ a {
     opacity: 1;
   }
 }
+@keyframes appearance {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80px);
+    transform: translateX(-80px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80px);
+    transform: translateX(-80px);
+  }
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(90);
+    transform: rotate(90);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(90);
+    transform: rotate(90);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(140deg);
+  }
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bg_pic {
+  object-fit: cover;
+}
+
 img {
   max-width: 100%;
   position: relative;
@@ -408,13 +468,528 @@ body {
   background-color: #f6f6f6;
 }
 
-@media screen and (min-width: 801px) {
+header {
+  box-shadow: none;
+  position: relative;
+}
+header .arrow {
+  position: absolute;
+  left: 25px;
+  top: 40%;
+  font-size: 22px;
+  color: #000;
+}
+
+.delay_0 {
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-name: appearance;
+}
+
+.delay_1 {
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-name: appearance;
+}
+
+.delay_2 {
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+  animation-name: appearance;
+}
+
+.delay_3 {
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-name: appearance;
+}
+
+.delay_4 {
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-name: appearance;
+}
+
+.delay_5 {
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-name: appearance;
+}
+
+.delay_6 {
+  animation-duration: 1s;
+  animation-delay: 1.2s;
+  animation-name: appearance;
+}
+
+.delay_7 {
+  animation-duration: 1s;
+  animation-delay: 1.4s;
+  animation-name: appearance;
+}
+
+.delay_8 {
+  animation-duration: 1s;
+  animation-delay: 1.6s;
+  animation-name: appearance;
+}
+
+.delay_9 {
+  animation-duration: 1s;
+  animation-delay: 1.8s;
+  animation-name: appearance;
+}
+
+@media screen and (max-width: 899px) {
+  .position {
+    margin-top: -100px;
+  }
+  .menus {
+    height: auto;
+    border-radius: 35px 35px 0 0;
+    background-color: #f6f6f6;
+    position: relative;
+    bottom: 70px;
+  }
+  .menus .menu_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 80px;
+    margin: auto;
+    border: 0px solid red;
+    padding: 1rem;
+  }
+  .menus .menu_header h2 {
+    font-family: "Shrikhand";
+    font-size: 24px;
+  }
+  .menus .menu_header .card_like_btn {
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+  .menus .menu_header .card_like_btn :hover > .fa-solid {
+    opacity: 1;
+  }
+  .menus .menu_header .card_like_btn i {
+    font-size: 32px;
+    right: 0;
+    position: absolute;
+  }
+  .menus .menu_header .card_like_btn .fa-solid {
+    color: transparent;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  .menus .menu_header .card_like_btn .fa-solid:hover {
+    opacity: 1;
+  }
+  .menus h3 {
+    margin-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .menus .span {
+    width: 45px;
+    height: 5px;
+    background-color: #99e2d0;
+    margin-left: 5%;
+  }
+  .menus .starters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .menus .starters .f_widget:hover .m_price {
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .menus .starters .f_widget:hover .m_price_rotate {
+    -webkit-animation: rotate-center 1s ease-in-out reverse both;
+    animation: rotate-center 1s ease-in-out reverse both;
+  }
+  @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(140deg);
+    }
+  }
+  .menus .starters .f_widget:hover > .m_price_slide {
+    -webkit-animation: slide-left 0.5s ease-in-out both;
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .menus .starters .f_widget {
+    width: 90%;
+    height: 65px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    row-gap: 120px;
+    padding: 1rem 1rem 1rem 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+  .menus .starters .f_widget .menu_contents_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid green;
+    display: block;
+    text-align: start;
+    max-width: 67%;
+    line-height: 2rem;
+  }
+  .menus .starters .f_widget .menu_contents_description h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    border: 0px solid red;
+  }
+  .menus .starters .f_widget .menu_contents_description p {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid blue;
+  }
+  .menus .starters .f_widget .m_price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+  }
+  .menus .starters .f_widget .m_price_slide {
+    background-color: #99e2d0;
+    position: relative;
+    left: 97px;
+    width: 55px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+  }
+  .menus .starters .f_widget .m_price_slide .m_price_rotate {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition: 1s;
+    color: #99e2d0;
+  }
+  .menus .main_course {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  .menus .main_course .f_widget:hover .m_price {
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .menus .main_course .f_widget:hover .m_price_rotate {
+    -webkit-animation: rotate-center 1s ease-in-out reverse both;
+    animation: rotate-center 1s ease-in-out reverse both;
+  }
+  @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(90);
+      transform: rotate(90);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(140deg);
+    }
+  }
+  .menus .main_course .f_widget:hover > .m_price_slide {
+    -webkit-animation: slide-left 0.5s ease-in-out both;
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-80px);
+      transform: translateX(-80px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-80px);
+      transform: translateX(-80px);
+    }
+  }
+  .menus .main_course .f_widget {
+    width: 90%;
+    height: 65px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    gap: 12px;
+    padding: 1rem 0 1rem 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+  .menus .main_course .f_widget .menu_contents_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid green;
+    display: block;
+    text-align: start;
+    max-width: 75%;
+    line-height: 2rem;
+  }
+  .menus .main_course .f_widget .menu_contents_description h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    border: 0px solid red;
+  }
+  .menus .main_course .f_widget .menu_contents_description p {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid blue;
+  }
+  .menus .main_course .f_widget .m_price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+  }
+  .menus .main_course .f_widget .m_price_slide {
+    background-color: #99e2d0;
+    position: relative;
+    left: 80px;
+    width: 55px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+  }
+  .menus .main_course .f_widget .m_price_slide .m_price_rotate {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition: 1s;
+    color: #99e2d0;
+  }
+  .menus .order_menu {
+    width: 100%;
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+  }
+  .menus .order_menu button {
+    box-shadow: 0px 4px 4px 0.5px #c8c7c7;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    border-radius: 28px;
+    border: none;
+    display: inline-block;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .menus .order_menu button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+  .dessert {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  .dessert .f_widget:hover .m_price {
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .dessert .f_widget:hover .m_price_rotate {
+    -webkit-animation: rotate-center 1s ease-in-out reverse both;
+    animation: rotate-center 1s ease-in-out reverse both;
+  }
+  .dessert .f_widget:hover > .m_price_slide {
+    -webkit-animation: slide-left 0.5s ease-in-out both;
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .dessert .f_widget {
+    width: 90%;
+    height: 65px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    gap: 12px;
+    padding: 1rem 0 1rem 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+  .dessert .f_widget .menu_contents_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid green;
+    display: block;
+    text-align: start;
+    max-width: 65%;
+    line-height: 2rem;
+  }
+  .dessert .f_widget .menu_contents_description h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    border: 0px solid red;
+  }
+  .dessert .f_widget .menu_contents_description p {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid blue;
+  }
+  .dessert .f_widget .m_price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+  }
+  .dessert .f_widget .m_price_slide {
+    background-color: #99e2d0;
+    position: relative;
+    left: 80px;
+    width: 55px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+  }
+  .dessert .f_widget .m_price_slide .m_price_rotate {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition: 1s;
+    color: #99e2d0;
+  }
+  .order_menu {
+    width: 100%;
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+  }
+  .order_menu button {
+    box-shadow: 0px 4px 4px 0.5px #c8c7c7;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    border-radius: 28px;
+    border: none;
+    display: inline-block;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .order_menu button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}
+@media screen and (min-width: 900px) {
+  .position {
+    margin-top: -390px;
+  }
   .menus {
     height: 700px;
     border-radius: 50px 50px 0 0;
     background-color: #f6f6f6;
     position: relative;
-    bottom: 100px;
+    bottom: 120px;
+    height: 800px;
   }
   .menus .menu_header {
     display: flex;
@@ -468,8 +1043,10 @@ body {
     margin-left: 5%;
   }
   .menus .starters {
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
     margin-top: 15px;
     margin-bottom: 35px;
   }
@@ -480,49 +1057,9 @@ body {
     -webkit-animation: rotate-center 1s ease-in-out reverse both;
     animation: rotate-center 1s ease-in-out reverse both;
   }
-  @-webkit-keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(90);
-      transform: rotate(90);
-    }
-    100% {
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-  }
-  @keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(90);
-      transform: rotate(90);
-    }
-    100% {
-      -webkit-transform: rotate(180deg);
-      transform: rotate(140deg);
-    }
-  }
   .menus .starters .f_widget:hover > .m_price_slide {
     -webkit-animation: slide-left 0.5s ease-in-out both;
     animation: slide-left 0.5s ease-in-out both;
-  }
-  @-webkit-keyframes slide-left {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-80px);
-      transform: translateX(-80px);
-    }
-  }
-  @keyframes slide-left {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-80px);
-      transform: translateX(-80px);
-    }
   }
   .menus .starters .f_widget {
     width: 30%;
@@ -540,6 +1077,7 @@ body {
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    animation: appearance 1s ease-in-out both;
   }
   .menus .starters .f_widget .menu_contents_description {
     white-space: nowrap;
@@ -609,49 +1147,9 @@ body {
     -webkit-animation: rotate-center 1s ease-in-out reverse both;
     animation: rotate-center 1s ease-in-out reverse both;
   }
-  @-webkit-keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(90);
-      transform: rotate(90);
-    }
-    100% {
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-  }
-  @keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(90);
-      transform: rotate(90);
-    }
-    100% {
-      -webkit-transform: rotate(180deg);
-      transform: rotate(140deg);
-    }
-  }
   .menus .main_course .f_widget:hover > .m_price_slide {
     -webkit-animation: slide-left 0.5s ease-in-out both;
     animation: slide-left 0.5s ease-in-out both;
-  }
-  @-webkit-keyframes slide-left {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-80px);
-      transform: translateX(-80px);
-    }
-  }
-  @keyframes slide-left {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-80px);
-      transform: translateX(-80px);
-    }
   }
   .menus .main_course .f_widget {
     width: 30%;
@@ -669,6 +1167,8 @@ body {
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    animation: appearance 1s ease-in-out both;
+    animation-delay: 0.2s;
   }
   .menus .main_course .f_widget .menu_contents_description {
     white-space: nowrap;
@@ -707,7 +1207,7 @@ body {
   .menus .main_course .f_widget .m_price_slide {
     background-color: #99e2d0;
     margin: -1rem -5.2rem -1rem 0;
-    width: 17%;
+    width: 70px;
     height: 98px;
     display: flex;
     align-items: center;
@@ -743,6 +1243,118 @@ body {
     cursor: pointer;
   }
   .menus .order_menu button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+  .dessert {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  .dessert .f_widget:hover .m_price {
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .dessert .f_widget:hover .m_price_rotate {
+    -webkit-animation: rotate-center 1s ease-in-out reverse both;
+    animation: rotate-center 1s ease-in-out reverse both;
+  }
+  .dessert .f_widget:hover > .m_price_slide {
+    -webkit-animation: slide-left 0.5s ease-in-out both;
+    animation: slide-left 0.5s ease-in-out both;
+  }
+  .dessert .f_widget {
+    width: 30%;
+    height: 65px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    gap: 12px;
+    padding: 1rem 0 1rem 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    animation: appearance 1s ease-in-out both;
+    animation-delay: 0.4s;
+  }
+  .dessert .f_widget .menu_contents_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid green;
+    display: block;
+    text-align: start;
+    max-width: 65%;
+    line-height: 2rem;
+  }
+  .dessert .f_widget .menu_contents_description h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    font-weight: bold;
+    border: 0px solid red;
+  }
+  .dessert .f_widget .menu_contents_description p {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 0px solid blue;
+  }
+  .dessert .f_widget .m_price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+  }
+  .dessert .f_widget .m_price_slide {
+    background-color: #99e2d0;
+    margin: -1rem -5.2rem -1rem 0;
+    width: 70px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+  }
+  .dessert .f_widget .m_price_slide .m_price_rotate {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition: 1s;
+    color: #99e2d0;
+  }
+  .order_menu {
+    width: 100%;
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+  }
+  .order_menu button {
+    box-shadow: 0px 4px 4px 0.5px #c8c7c7;
+    background: linear-gradient(180deg, rgb(241, 147, 229) 16%, rgb(141, 83, 191) 90%);
+    border-radius: 28px;
+    border: none;
+    display: inline-block;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .order_menu button:hover {
     transform: scale(1.02);
     opacity: 0.9;
   }
