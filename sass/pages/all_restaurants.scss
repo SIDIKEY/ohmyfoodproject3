@@ -1,6 +1,8 @@
 @use "../utils/gradient.scss";
 @use "../utils/colors.scss";
 @use "../utils/animation.scss";
+@use "../layout/footer.scss";
+
 
 
 a:-webkit-any-link {
@@ -8,13 +10,21 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: underline;
 }
-.bg_pic{
-    object-fit: cover;
+.BG{
+    width: 100%;
     
+    
+  
+    img{
+        width: 100%;
+    z-index: 1;
+
+    }
 }
 
+
 img {
-    max-width: 100%;
+   
     position: relative;
 
 }
@@ -86,6 +96,39 @@ header{
     animation-name: appearance;
 }
 
+footer {
+    background-color: colors.$darkgrey;
+    margin: 0;
+    width: 100%;
+    height: 155px;
+    .footer_size{
+        padding-left: 25px;
+        padding-top: 15px;
+        color: white;
+        & h3{
+            font-family: 'Shrikhand';
+            padding-bottom: 10px;     
+        }
+        & ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 6px;
+            & li{
+                display: flex;
+                column-gap: 8px;
+                width: fit-content;
+                
+            }
+        }
+    }
+
+}
+
+a { 
+   color: white;
+}
 
 @media screen and (max-width:899px){
     .position{
@@ -106,9 +149,10 @@ header{
             margin: auto;
             border: 0px solid red;
             padding: 1rem;
+            font-family: 'shrikhand';
             & h2{
                 font-family: 'Shrikhand';
-                font-size: 24px;
+                font-size: 29px;
             }
             .card_like_btn{
                 width: 32px;
@@ -167,8 +211,8 @@ header{
                     animation: rotate-center 1s ease-in-out reverse both;
                     @-webkit-keyframes rotate-center {
                         0% {
-                            -webkit-transform: rotate(90);
-                            transform: rotate(90);
+                            -webkit-transform: rotate(0);
+                            transform: rotate(0);
                         }
                         100% {
                             -webkit-transform: rotate(180deg);
@@ -177,8 +221,8 @@ header{
                     }
                     @keyframes rotate-center {
                         0% {
-                            -webkit-transform: rotate(90);
-                            transform: rotate(90);
+                            -webkit-transform: rotate(0);
+                            transform: rotate(0);
                         }
                         100% {
                             -webkit-transform: rotate(180deg);
@@ -283,8 +327,8 @@ header{
                         animation: rotate-center 1s ease-in-out reverse both;
                         @-webkit-keyframes rotate-center {
                             0% {
-                              -webkit-transform: rotate(90);
-                                      transform: rotate(90);
+                              -webkit-transform: rotate(0);
+                                      transform: rotate(0);
                             }
                             100% {
                                 -webkit-transform: rotate(180deg);
@@ -293,8 +337,8 @@ header{
                         }
                         @keyframes rotate-center {
                             0% {
-                              -webkit-transform: rotate(90);
-                                      transform: rotate(90);
+                              -webkit-transform: rotate(0);
+                                      transform: rotate(0);
                             }
                             100% {
                               -webkit-transform: rotate(180deg);
@@ -550,6 +594,17 @@ header{
 
 
 @media screen and (min-width:900px){
+    .BG{
+        width: 99.7%;
+        border: 1px solid blue;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        height: 80rem;
+        img{
+            width: 100%;
+        }
+    }
 .position{
     margin-top: -390px;
 }     
@@ -560,6 +615,7 @@ header{
     position: relative;
     bottom: 120px;
     height: 800px;
+    z-index: 1000;
     
     .menu_header{
         display: flex;
